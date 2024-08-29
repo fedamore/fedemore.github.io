@@ -32,6 +32,22 @@
     white-space: nowrap;
 }
 
+.marquee {
+    display: inline-block;
+    animation: scroll-left 20s linear infinite; /* Slow scrolling speed */
+    animation-delay: 0s; /* Make the banner appear right away */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start from outside the right edge */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to outside the left edge */
+    }
+}
+
 header {
     background-color: rgba(65,193,186,1); /* Primary color */
     color: white;
@@ -161,6 +177,7 @@ section {
 #about {
     margin-top: 0; /* Ensure there's no extra margin at the top */
     padding-top: 0; /* Remove any padding that might add space */
+    
 }
 
 .about-container {
