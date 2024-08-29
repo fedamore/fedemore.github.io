@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEDE AMORE Desserts - Ice Cream Shop</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8; /* Light gray background for overall site */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        .banner {
+            background-color: rgba(65,193,186,1); /* Primary color */
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            background-color: rgba(65,193,186,1); /* Primary color */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            top: 55px; /* Adjusted for banner height */
+            z-index: 999;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center; /* Center the menu horizontally */
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(65,193,186,1); /* Primary color */
+            position: relative;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links i {
+            margin-right: 8px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.2rem; /* Smaller size */
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(65,193,186,1); /* Keep menu background consistent */
+                position: absolute;
+                top: 100%; /* Dropdown starts right below the header */
+                left: 0;
+                z-index: 998;
+                align-items: center; /* Center items in the dropdown */
+            }
+
+            .nav-links li {
+                text-align: center;
+                padding: 15px 0;
+                border-bottom: 1px solid #ffffff40;
+                width: 100%; /* Ensure full-width clickable area */
+            }
+
+            .menu-icon {
+                display: block;
+                position: absolute;
+                right: 50%;
+                transform: translateX(50%); /* Center the menu icon */
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links a {
+                justify-content: center;
+            }
+        }
+
+        .hero {
+            background-color: rgba(65,193,186,1); /* Primary color */
+            color: white;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-heading {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .hero-title {
+            color: rgba(255, 255, 255, 0.9); /* Slightly off-white for contrast */
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 0;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
+
+        .hero-icecream {
+            color: #ff7f50; /* Accent color */
+            font-size: 4.5rem;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15); /* Light, translucent background */
+            padding: 5px 15px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            margin: 10px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Stronger shadow for text */
+        }
+
+        .hero-highlight {
+            color: rgba(255, 255, 255, 0.9); /* Off-white for contrast */
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15); /* Light, translucent background */
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: #ffffff; /* White background for sections */
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow to add depth */
+        }
+
+        footer {
+            background-color: rgba(65,193,186,1); /* Primary color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center; /* Center text in About Us */
+            background-color: #ffffff; /* White background for content areas */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for card-like effect */
+        }
+
+        .about-text, .about-image {
+            margin-bottom: 20px;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: rgba(65,193,186,1); /* Primary color */
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-icecream-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .why-icecream-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+
+
+        .why-icecream-item {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .why-icecream-item h3 {
+            font-size: 1.5rem;
+            color: rgba(65,193,186,1);
+            margin-bottom: 10px;
+        }
+
+        .why-icecream-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: #ffffff; /* White background for content areas */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for card-like effect */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact-details, .contact-hours {
+            flex: 1 1 48%;
+        }
+
+        .contact-details p, .contact-hours p {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .contact-hours table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .contact-hours td {
+            padding: 10px 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .contact-hours em {
+            color: #ff7f50; /* Accent color */
+        }
+
+        @media (max-width: 768px) {
+            .about-text, .about-image, .contact-details, .contact-hours {
+                flex: 1 1 100%;
+                margin-bottom: 20px;
+            }
+
+            .menu-icon {
+                right: 50%;
+                transform: translateX(50%); /* Center the menu icon */
+            }
+        }
+
+        section h2 {
+    font-size: 2rem;
+    color: rgba(65,193,186,1); /* Primary color */
+    margin-bottom: 20px;
+    text-align: center; /* Center the title to match About Us */
+}
+
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <p>Enjoy 2 Complimentary Toppings When You Mention 'Social' at Checkout!</p>
+</div>
+
+<header>
+    <h1>FEDE AMORE Desserts</h1>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+            <li><a href="#why-our-icecream"><i class="fas fa-ice-cream"></i> Why Our Ice Cream</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <h1 class="hero-heading">
+        <span class="hero-title">Delicious</span>
+        <span class="hero-icecream">Ice Cream</span><br>
+        <span class="hero-highlight">Made with Love</span>
+    </h1>
+</div>
+
+<section id="about">
+    <div class="about-container">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>At <strong>FEDE AMORE Desserts</strong>, we craft our ice cream with the finest ingredients, bringing you flavors that are both unique and delightful. Whether you're looking for a classic cone or something new, we have something for everyone!</p>
+            <p>Our passion for quality and creativity drives us to deliver the best ice cream experience to our customers. Come visit us and indulge in a treat made with love!</p>
+        </div>
+        <div class="about-image">
+            <img src="https://example.com/ice-cream-shop-interior.jpg" alt="Ice Cream Shop Interior"> <!-- Replace with actual image URL -->
+        </div>
+    </div>
+</section>
+
+<section id="menu">
+    <h2>Our Menu</h2>
+    <p>Check out our delicious menu:</p>
+    <p><a href="/mnt/data/MENU.pdf" target="_blank">View Menu (PDF)</a></p> <!-- Link to the uploaded PDF file -->
+</section>
+
+<section id="why-our-icecream">
+    <h2>Why Our Ice Cream</h2>
+    <div class="why-icecream-container">
+        <div class="why-icecream-item">
+            <h3>Artisanal Quality</h3>
+            <p>We use only the finest, freshest ingredients to handcraft every scoop.</p>
+        </div>
+        <div class="why-icecream-item">
+            <h3>Unique Flavors</h3>
+            <p>Our rotating selection of flavors offers something new and exciting every visit.</p>
+        </div>
+        <div class="why-icecream-item">
+            <h3>Vegan Options</h3>
+            <p>Delicious, dairy-free options for those with dietary preferences or restrictions.</p>
+        </div>
+        <div class="why-icecream-item">
+            <h3>Family-Friendly Environment</h3>
+            <p>A welcoming place for everyone, from kids to adults.</p>
+        </div>
+        <div class="why-icecream-item">
+            <h3>Sustainably Sourced</h3>
+            <p>We are committed to sustainability and source our ingredients responsibly.</p>
+        </div>
+        <div class="why-icecream-item">
+            <h3>Exceptional Service</h3>
+            <p>Our friendly staff is here to make your experience enjoyable and memorable.</p>
+        </div>
+    </div>
+</section>
+
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+        <div class="contact-details">
+            <p><strong>Address:</strong></p>
+            <p>16916 Focus Lp, Land O' Lakes, FL 34638</p>
+            <p><strong>Phone:</strong></p>
+            <p><a href="tel:+18134288280">(813) 428-8280</a></p>
+        </div>
+        <div class="contact-hours">
+            <p><strong>Hours:</strong></p>
+            <table>
+                <tr>
+                    <td>Sunday</td>
+                    <td>11:00 AM – 9:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>1:00 PM – 10:00 PM </td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>1:00 PM – 10:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>1:00 PM – 10:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>1:00 PM – 10:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>1:00 PM – 10:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>11:00 AM – 10:00 PM</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 FEDE AMORE Desserts. All rights reserved.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>
