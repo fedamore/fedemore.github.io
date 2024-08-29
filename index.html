@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         
-        body {
+body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     color: #333;
@@ -52,7 +52,7 @@ header {
     background-color: rgba(65,193,186,1); /* Primary color */
     color: white;
     text-align: center;
-    padding: 5px 15px; /* Reduced padding */
+    padding: 10px 0; /* Ensure consistent padding */
     position: sticky;
     top: 0; /* Ensure it sticks directly below the banner */
     z-index: 1100; /* Higher z-index to ensure it stays above the banner */
@@ -61,7 +61,7 @@ header {
 
 header h1 {
     font-size: 1.8rem;
-    margin: 0;
+    margin: 10px 0; /* Add equal spacing */
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -70,6 +70,7 @@ header h1 {
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5rem; /* Smaller on mobile */
+        margin: 8px 0; /* Adjust margin for mobile */
     }
 }
 
@@ -77,7 +78,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 0; /* Ensure consistent padding */
     background-color: rgba(65,193,186,1); /* Primary color */
     position: relative;
     z-index: 1100; /* Ensure nav stays above the banner */
@@ -114,17 +115,20 @@ nav {
     font-size: 1.5rem;
     cursor: pointer;
     color: white;
+    top: 52%; 
     z-index: 1101; /* Ensure menu icon stays above everything */
+    margin: 10px 0; /* Add equal spacing */
 }
 
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
         position: absolute;
-        top: 55%; /* Increase the value to add more space between menu icon and title */
+        top: 50%; /* Center icon vertically in header */
         left: 50%;
         transform: translate(-50%, -50%); /* Center horizontally */
         z-index: 1101; /* Ensure it stays above the banner and header */
+        margin: 8px 0; /* Adjust margin for mobile */
     }
 
     .nav-links {
@@ -157,14 +161,32 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 15px;
+    padding: 10px 0; /* Consistent padding */
     text-align: center;
     margin-bottom: 5px;
     position: relative;
     z-index: 900; /* Below the header and banner */
 }
 
+.hero h1 {
+    margin: px 0; /* Add equal spacing */
+    font-weight: bold;
+    font-size: 2.2rem; /* Adjust font size as needed */
+    line-height: 1.2; /* Reduce line height to bring the lines closer */
+}
 
+.hero .hero-title {
+    margin-bottom: 10px; /* Consistent margin */
+}
+
+.hero .hero-icecream {
+    font-size: 2.2rem; /* Match this with hero-title */
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: 0px 0; /* Consistent margin */
+}
 
 section {
     padding: 30px 15px;
