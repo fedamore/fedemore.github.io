@@ -6,66 +6,42 @@
     <title>FEDE AMORE Desserts | Land O' Lakes, Florida</title>
 
     <!-- Open Graph Meta Tags for Social Media Sharing -->
-    <meta property="og:title" content="FEDE AMORE Desserts Land O' Lakes, Florida">
+    <meta property="og:title" content="FEDE AMORE Desserts | Land O' Lakes, Florida">
     <meta property="og:description" content="Discover the finest gelato and desserts at FEDE AMORE Desserts in Land O' Lakes, Florida.">
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Include Chau Philomene One Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chau+Philomene+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Buffalo&display=swap" rel="stylesheet">
+
     <style>
-        
-body {
+       body {
+    background-color: #ffffff; /* White background */
+    color: #272263; /* Blue text for general content */
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
 
-.banner {
-    background-color: rgba(65,193,186,1); /* Primary color */
-    color: white;
+/* Header */
+header {
+    background-color: #272263; /* Blue background */
+    color: #ffffff; /* White text */
     text-align: center;
     padding: 10px 0;
-    font-size: 1rem;
-    font-weight: bold;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Higher z-index to be above content but below header */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.marquee {
-    display: inline-block;
-    animation: scroll-left 20s linear infinite; /* Slow scrolling speed */
-    animation-delay: 0s; /* Make the banner appear right away */
-    white-space: nowrap; /* Prevent wrapping */
-}
-
-@keyframes scroll-left {
-    0% {
-        transform: translateX(100%); /* Start from outside the right edge */
-    }
-    100% {
-        transform: translateX(-100%); /* Move to outside the left edge */
-    }
-}
-
-header {
-    background-color: rgba(65,193,186,1); /* Primary color */
-    color: white;
-    text-align: center;
-    padding: 10px 0; /* Ensure consistent padding */
-    position: sticky;
-    top: 0; /* Ensure it sticks directly below the banner */
-    z-index: 1100; /* Higher z-index to ensure it stays above the banner */
+    z-index: 1100;
     margin: 0;
 }
 
 header h1 {
     font-size: 1.8rem;
-    margin: 10px 0; /* Add equal spacing */
+    margin: 10px 0;
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -73,19 +49,20 @@ header h1 {
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5rem; /* Smaller on mobile */
-        margin: 8px 0; /* Adjust margin for mobile */
+        font-size: 1.5rem;
+        margin: 8px 0;
     }
 }
 
+/* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0; /* Ensure consistent padding */
-    background-color: rgba(65,193,186,1); /* Primary color */
+    padding: 10px 0;
+    background-color: #272263; /* Blue background */
     position: relative;
-    z-index: 1100; /* Ensure nav stays above the banner */
+    z-index: 1100;
 }
 
 .nav-links {
@@ -103,15 +80,9 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: #ffffff; /* White text */
     font-weight: bold;
-    display: flex;
-    align-items: center;
     font-size: 1rem;
-}
-
-.nav-links i {
-    margin-right: 5px;
 }
 
 .menu-icon {
@@ -120,28 +91,28 @@ nav {
     cursor: pointer;
     color: white;
     top: 52%; 
-    z-index: 1101; /* Ensure menu icon stays above everything */
-    margin: 10px 0; /* Add equal spacing */
+    z-index: 1101;
+    margin: 10px 0;
 }
 
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
         position: absolute;
-        top: 50%; /* Center icon vertically in header */
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); /* Center horizontally */
-        z-index: 1101; /* Ensure it stays above the banner and header */
-        margin: 8px 0; /* Adjust margin for mobile */
+        transform: translate(-50%, -50%);
+        z-index: 1101;
+        margin: 8px 0;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: rgba(65,193,186,1); /* Primary color */
+        background-color: #272263;
         position: absolute;
-        top: 100%; /* Position it below the header */
+        top: 100%;
         left: 0;
         z-index: 1100;
         align-items: center;
@@ -159,39 +130,9 @@ nav {
     }
 }
 
-.hero {
-    background-color: rgba(65,193,186,1); /* Primary color */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 0; /* Consistent padding */
-    text-align: center;
-    margin-bottom: 5px;
-    position: relative;
-    z-index: 900; /* Below the header and banner */
-}
 
-.hero h1 {
-    margin: px 0; /* Add equal spacing */
-    font-weight: bold;
-    font-size: 2.2rem; /* Adjust font size as needed */
-    line-height: 1.2; /* Reduce line height to bring the lines closer */
-}
 
-.hero .hero-title {
-    margin-bottom: 10px; /* Consistent margin */
-}
-
-.hero .hero-icecream {
-    font-size: 2.2rem; /* Match this with hero-title */
-    background-color: rgba(255, 255, 255, 0.15);
-    padding: 5px 10px;
-    border-radius: 10px;
-    text-transform: uppercase;
-    margin: 0px 0; /* Consistent margin */
-}
-
+/* Section Styles */
 section {
     padding: 30px 15px;
     text-align: center;
@@ -200,10 +141,10 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* About Section */
 #about {
-    margin-top: 0; /* Ensure there's no extra margin at the top */
-    padding-top: 0; /* Remove any padding that might add space */
-    
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .about-container {
@@ -216,173 +157,168 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero-heading {
-    margin: 0;
-    font-weight: bold;
+.about-text, .about-image {
+    margin-bottom: 20px;
 }
 
-.hero-title {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 2.5rem; /* Adjust font size */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block; /* Ensure it stays on one line */
-    white-space: nowrap; /* Prevents wrapping to a new line */
-    margin-bottom: 0;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+.about-text h2 {
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 2rem;
+    color: #412600; /* Brown heading */
+    margin-bottom: 15px;
 }
 
-.hero-icecream {
-    color: #ff7f50; /* Accent color */
-    font-size: 2.5rem; /* Adjust font size */
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.15);
-    padding: 5px 10px;
+.about-text p {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #272263; /* Blue text */
+}
+
+.about-image img {
+    max-width: 100%;
     border-radius: 10px;
-    text-transform: uppercase;
-    margin: 10px 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    white-space: nowrap; /* Prevents wrapping to a new line */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem; /* Adjust font size for mobile */
-    }
-
-    .hero-icecream {
-        font-size: 2rem; /* Adjust font size for mobile */
-        padding: 3px 8px; /* Adjust padding */
-    }
+/* Menu Section */
+#menu {
+    background-color: #ffffff; /* White background */
+    color: #272263; /* Blue text */
 }
 
-        section {
-            padding: 30px 15px;
-            text-align: center;
-            background-color: #ffffff;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background-color: rgba(65,193,186,1);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        .about-container {
-            max-width: 100%;
-            margin: 0 auto;
-            text-align: center;
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-text, .about-image {
-            margin-bottom: 20px;
-        }
-
-        .about-text h2 {
-            font-size: 2rem;
-            color: rgba(65,193,186,1);
-            margin-bottom: 15px;
-        }
-
-        .about-text p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .why-icecream-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
-    gap: 20px;
-    margin: 0 auto;
-    max-width: 1200px; /* Limit width to ensure it fits well on larger screens */
+#menu h2 {
+    font-family: 'Buffalo', cursive;
+    font-size: 2rem;
+    color: #412600; /* Brown heading */
+    margin-bottom: 20px;
 }
 
-@media (max-width: 1024px) {
-    .why-icecream-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns layout on medium screens */
-    }
+/* Footer */
+footer {
+    background-color: #272263; /* Blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    .why-icecream-container {
-        grid-template-columns: 1fr; /* 1 column on small screens */
-    }
+/* General Links */
+a {
+    color: #412600; /* Brown links */
+}
+
+a:hover {
+    color: #272263; /* Blue text on hover */
+}
+
+/* Buttons and Other Elements */
+button, .button-class {
+    background-color: #412600; /* Brown button background */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .button-class:hover {
+    background-color: #272263; /* Blue on hover */
+    color: #ffffff; /* White text */
 }
 
 .why-icecream-item {
+    background-color: #ffffff; /* White background */
+    color: #272263; /* Blue text */
+    border: 2px solid #412600; /* Brown border */
     padding: 20px;
-    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-}
-
-.why-icecream-item h3 {
-    font-size: 1.5rem;
-    color: rgba(65,193,186,1);
-    margin-bottom: 10px;
 }
 
 .why-icecream-item:hover {
     transform: translateY(-5px);
 }
 
-        .contact-container {
-            max-width: 100%;
-            margin: 0 auto;
-            text-align: left;
-            background-color: #ffffff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: block;
+.contact-container {
+    background-color: #ffffff; /* White background */
+    color: #272263; /* Blue text */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.contact-details p, .contact-hours p {
+    font-size: 1rem;
+    color: #272263; /* Blue text */
+}
+
+.contact-hours table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    color: #272263; /* Blue text */
+}
+
+.contact-hours td {
+    padding: 10px 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-hours em {
+    color: #412600; /* Brown highlight */
+}
+
+/* Section Titles */
+section h2 {
+    font-size: 1.8rem;
+    color: #412600; /* Brown heading */
+    margin-bottom: 20px;
+}
+
+        /* The Fede Amore Way Section with Chau Font */
+        #the-fede-amore-way h2,
+        #the-fede-amore-way h3,
+        #the-fede-amore-way p {
+            font-family: 'Chau Philomene One', sans-serif;
         }
 
-        .contact-details, .contact-hours {
-            margin-bottom: 20px;
-        }
 
-        .contact-details p, .contact-hours p {
-            font-size: 1rem;
-            color: #333;
-        }
+        .banner {
+    background-color: #ffffff; /* White background */
+    color: #6a0dad; /* Purple text */
+    text-align: center;
+    padding: 15px 0; /* Padding for spacing */
+    font-size: 1.2rem; /* Font size */
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 1px; /* Letter spacing for readability */
+    text-transform: uppercase; /* Uppercase text */
+}
 
-        .contact-hours table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 1rem;
-            color: #333;
-        }
+.marquee {
+    display: inline-block;
+    animation: scroll-left 15s linear infinite; /* Scrolling text */
+    white-space: nowrap;
+}
 
-        .contact-hours td {
-            padding: 10px 5px;
-            border-bottom: 1px solid #ddd;
-        }
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start outside the right edge */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to outside the left edge */
+    }
+}
 
-        .contact-hours em {
-            color: #ff7f50;
-        }
-
-        section h2 {
-            font-size: 1.8rem;
-            color: rgba(65,193,186,1);
-            margin-bottom: 20px;
-        }
 
     </style>
 </head>
@@ -394,76 +330,66 @@ section {
         </div>
     </div>
 
-<header>
-    <h1>FEDE AMORE Desserts</h1>
-    <nav>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
+    <header>
+        <h1>FEDE AMORE Desserts</h1>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" style="font-family: 'Chau Philomene One', sans-serif;">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+
+    <section id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 style="font-family: 'Chau Philomene One', sans-serif;">About</h2>
+                <p style="font-family: sans-serif;">
+                    Welcome to Fede Amore, where every dessert tells a story of passion and tradition. At Fede Amore, we pride ourselves on crafting authentic desserts that are as delightful to look at as they are to taste. Each treat is made with the finest ingredients and an abundance of love, ensuring a truly exquisite experience for all who visit. Whether you’re craving a classic or seeking something uniquely tantalizing, Fede Amore promises a sweet escape into the world of extraordinary flavors and memorable moments.
+                </p>
+                <p style="font-family: sans-serif;">
+                    Located in the Hub at Bexley, the Federico family has brought their Italian culture and love for food to their community, proudly offering options for everyone including creamy gelato, vegan/dairy free gelato, homemade waffle cones, delicious toppings, mouthwatering desserts, Italian espresso, and more. Fede Amore is open daily and cannot wait to serve you.
+                </p>
+            </div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
-            <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
-            <li><a href="#why-our-icecream"><i class="fas fa-ice-cream"></i> Why Our Ice Cream</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    </section>
+    
 
-<div class="hero">
-    <h1 class="hero-heading">
-        <span class="hero-title">Delicious</span>
-        <span class="hero-icecream">Ice Cream</span><br>
-        <span class="hero-highlight">Made with Love</span>
-    </h1>
-</div>
+    <section id="menu">
+        <h2 style="font-family: 'Buffalo', cursive;">Happiness is a scoop away</h2>
+        <img src="menu brochure/2.png" alt="Fede Amore Menu" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+       
+    </section>
+    
 
-<section id="about">
-    <div class="about-container">
-        <div class="about-text">
-            <h2>About Us</h2>
-            <p>At <strong>FEDE AMORE Desserts</strong>, we craft our ice cream with the finest ingredients, bringing you flavors that are both unique and delightful. Whether you're looking for a classic cone or something new, we have something for everyone!</p>
-            <p>Our passion for quality and creativity drives us to deliver the best ice cream experience to our customers. Come visit us and indulge in a treat made with love!</p>
-        </div>
-        <div class="about-image">
-            <img src="https://media.istockphoto.com/id/504754434/photo/boy-at-an-ice-cream-shop.jpg?s=612x612&w=0&k=20&c=BuXHNTW4T7ggtPxdg-DR3aFothEHnRbs-BEqrCGAu54=" alt="Ice Cream Shop Interior"> <!-- Replace with actual image URL -->
-        </div>
-    </div>
-</section>
-
-<section id="menu">
-    <h2>Our Menu</h2>
-    <p>Check out our delicious menu:</p>
-    <a href="https://fedemore.github.io/img/MENU.pdf" target="_blank">View Menu (PDF)</a>
-
-    <!-- Link to the uploaded PDF file -->
-</section>
-
-<section id="why-our-icecream">
-    <h2>Why Our Ice Cream</h2>
+<section id="the-fede-amore-way">
+    <h2>The Fede Amore Way</h2>
     <div class="why-icecream-container">
         <div class="why-icecream-item">
-            <h3>Artisanal Quality</h3>
-            <p>We use only the finest, freshest ingredients to handcraft every scoop.</p>
+            <h3>Authenticity</h3>
+            <p>We pride ourselves on providing authentic gelato, desserts, coffee, and more, always honoring our Italian culture.</p>
         </div>
         <div class="why-icecream-item">
-            <h3>Unique Flavors</h3>
-            <p>Our rotating selection of flavors offers something new and exciting every visit.</p>
+            <h3>Quality</h3>
+            <p>We use the finest and freshest ingredients in all of our offerings, promising you will always receive top quality.</p>
         </div>
         <div class="why-icecream-item">
-            <h3>Vegan Options</h3>
-            <p>Delicious, dairy-free options for those with dietary preferences or restrictions.</p>
+            <h3>Variety</h3>
+            <p>We believe in having something for everyone, which is why you will find a variety of flavors, toppings, sweet options, dairy-free/vegan options, and seasonal specials.</p>
         </div>
         <div class="why-icecream-item">
-            <h3>Family-Friendly Environment</h3>
-            <p>A welcoming place for everyone, from kids to adults.</p>
+            <h3>Family</h3>
+            <p>We are a family-owned and operated business, and we want all customers to feel as though they are a part of our family.</p>
         </div>
         <div class="why-icecream-item">
-            <h3>Sustainably Sourced</h3>
-            <p>We are committed to sustainability and source our ingredients responsibly.</p>
-        </div>
-        <div class="why-icecream-item">
-            <h3>Exceptional Service</h3>
-            <p>Our friendly staff is here to make your experience enjoyable and memorable.</p>
+            <h3>Celebrate</h3>
+            <p>We strive to be a fun and inviting environment that is a go-to spot for everyone to gather.</p>
         </div>
     </div>
 </section>
@@ -514,8 +440,12 @@ section {
 </section>
 
 <footer>
+    
+    <p>Follow us on Instagram: <a href="https://www.instagram.com/fedeamoredesserts" target="_blank" style="color: #ffffff;">@fedeamoredesserts</a></p>
+    <p>Use our hashtag: <span style="color: #ffffff;">#fedeamorebexley</span></p>
     <p>&copy; 2024 FEDE AMORE Desserts. All rights reserved.</p>
 </footer>
+
 
 <script>
     function toggleMenu() {
