@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FEDE AMORE Desserts | Land O' Lakes, Florida</title>
 
+    <link rel="icon" href="graphics/Circle Logo Decal.jpg" type="image/png">
+
     <!-- Open Graph Meta Tags for Social Media Sharing -->
     <meta property="og:title" content="FEDE AMORE Desserts | Land O' Lakes, Florida">
     <meta property="og:description" content="Discover the finest gelato and desserts at FEDE AMORE Desserts in Land O' Lakes, Florida.">
-
+    <meta property="og:image" content="https://yourwebsite.com/menu/share-image.jpg">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
@@ -29,29 +31,22 @@
 
 /* Header */
 header {
-    background-color: #272263; /* Blue background */
-    color: #ffffff; /* White text */
     text-align: center;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1100;
-    margin: 0;
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 1.8rem;
-    margin: 10px 0;
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-family: 'Buffalo', cursive;
+    font-size: 2rem;
+    color: #412600;
+    margin: 0;
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
-        margin: 8px 0;
-    }
+header p {
+    font-family: 'Buffalo', cursive;
+    font-size: 1.5rem;
+    color: #412600;
+    margin-top: 10px;
 }
 
 /* Navigation Bar */
@@ -330,8 +325,15 @@ section h2 {
         </div>
     </div>
 
-    <header>
-        <h1>FEDE AMORE Desserts</h1>
+    <header style="text-align: center; background-color: #ffffff;">
+        <div style="display: inline-block; margin: 0; padding: 0;">
+            <!-- Logo Image -->
+            <img src="graphics/decal graphic1.png" alt="FEDE AMORE Desserts Logo" style="width: 100%; max-width: 300px; height: auto; display: block; border: none;">
+        </div>
+    </header>
+    
+    
+
         <nav>
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -363,6 +365,7 @@ section h2 {
 
     <section id="menu">
         <h2 style="font-family: 'Buffalo', cursive;">Happiness is a scoop away</h2>
+
         <img src="menu brochure/2.png" alt="Fede Amore Menu" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
        
     </section>
@@ -394,49 +397,33 @@ section h2 {
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-container">
-        <div class="contact-details">
-            <p><strong>Address:</strong></p>
-            <p>16916 Focus Lp, Land O' Lakes, FL 34638</p>
-            <p><strong>Phone:</strong></p>
-            <p><a href="tel:+18134288280">(813) 428-8280</a></p>
-        </div>
-        <div class="contact-hours">
-            <p><strong>Hours:</strong></p>
-            <table>
-                <tr>
-                    <td>Sunday</td>
-                    <td>11:00 AM – 9:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Monday</td>
-                    <td>1:00 PM – 10:00 PM </td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>1:00 PM – 10:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>1:00 PM – 10:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td>1:00 PM – 10:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>1:00 PM – 10:00 PM</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>11:00 AM – 10:00 PM</td>
-                </tr>
-            </table>
-        </div>
-    </div>
+<section id="contact" style="padding: 20px; background-color: #ffffff;">
+    <!-- Contact Us Heading -->
+    <h2 style="font-family: 'Chau Philomene One', sans-serif; font-size: 2rem; color: #412600; text-align: center;">
+        Contact Us
+    </h2>
+
+    <!-- Address -->
+    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #272263; text-align: center;">
+        16916 Focus Lp, Land O' Lakes, FL 34638
+    </p>
+
+    <!-- Phone -->
+    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #272263; text-align: center;">
+        Phone: (813) 428-8280
+    </p>
+
+    <!-- Hours -->
+    <p style="font-family: Arial, sans-serif; font-size: 1rem; color: #272263; text-align: center;">
+        Hours: <br>
+        Wednesday: 1–10 PM <br>
+        Thursday: 1–10 PM <br>
+        Friday: 1–10 PM <br>
+        Saturday: 11 AM–10 PM <br>
+        Sunday: 11 AM–9 PM <br>
+        Monday: 1–10 PM (Hours might differ) <br>
+        Tuesday: 1–10 PM
+    </p>
 </section>
 
 <footer>
